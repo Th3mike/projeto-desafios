@@ -70,9 +70,30 @@
             consumida. A ameaça de morte também vale para esse. ;)
           </p>
         </b-col>
-
       </b-row>
+      <img :src="image" alt="Work">
     </b-container>
   </main>
 </template>
+
+<script>
+import image from "../assets/work.jpeg";
+
+export default {
+  data: function () {
+    return {
+      image: image,
+    };
+  },
+};
+</script>
+
+<style scoped>
+@media only screen and (max-width: 600px) {
+  img {
+    width: 250px;
+    height: 100%;
+  }
+}
+</style>
 
