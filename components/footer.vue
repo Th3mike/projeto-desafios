@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-dark text-white fixed-bottom w-100">
+  <footer class="bg-dark text-white fixed w-100">
     <b-container fluid="lg">
       <b-row class="text-center">
         <b-col>
