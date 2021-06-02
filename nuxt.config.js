@@ -1,9 +1,19 @@
 export default {
+  target: "static", // default is 'server'
+  generate: {
+    routes: [
+      "/",
+      "/instagram",
+      "/form-login",
+      "/form-endereco",
+      "/form-endereco-api"
+    ]
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "projeto",
+    title: "Marcio Lacerda",
     htmlAttrs: {
-      lang: "en"
+      lang: "pt-BR"
     },
     meta: [
       { charset: "utf-8" },
