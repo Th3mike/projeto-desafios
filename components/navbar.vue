@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky-top background-nav-footer d-flex justify-content-center h4">
+  <header class="sticky-top background-nav-footer d-flex h4">
       <b-navbar toggleable="lg" type="dark">
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
