@@ -1,9 +1,12 @@
 <template>
-  <div onload="loadImage()" class="text-center mt-5 d-flex">
+  <div class="text-center mt-5 d-flex">
     <b-container class="bv-example-row mb-3">
       <div class="d-flex flex-row-wrap container">
         <img :src="imageAvatar" alt="Avatar" class="rounded-circle mobile-img" />
-        <h1 class="display-5">Marcio Lacerda</h1>
+        <ul>
+          <li><h1 class="display-5">Marcio Lacerda</h1></li>
+          <li><p><em>Developer from Matão-SP, Brazil</em></p></li>
+        </ul>
       </div>
       <b-row cols="3">
         <b-col class="mb-4 mt-4">
@@ -101,6 +104,9 @@ export default {
 </script>
 
 <style scoped>
+li {
+  list-style: none;
+}
 @media only screen and (max-width: 600px) {
   .mobile-img {
     width: 300px;

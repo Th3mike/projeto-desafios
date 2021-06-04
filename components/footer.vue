@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-dark text-white fixed w-100">
+  <footer class="text-white fixed-bottom w-100 mt-5 background-nav-footer">
     <b-container fluid="lg">
       <b-row class="text-center">
         <b-col>
@@ -72,7 +72,7 @@ a:hover {
 }
 @media only screen and (max-width: 600px) {
   footer {
-    position: relative;
+    position: fixed;
     bottom:0;
     left:0;
   }
