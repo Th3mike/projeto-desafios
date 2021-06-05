@@ -1,20 +1,22 @@
-# projeto
 
-## Build Setup
+# Desafios
 
-```bash
-# install dependencies
-$ yarn install
+Projeto com alguns desafios solicitado por um professor da faculdade. 
+Sei que da pra melhorar 1000% o que foi feito, porém para meu conhecimento foi um baita aprendizado!
 
-# serve with hot reload at localhost:3000
-$ yarn dev
 
-# build for production and launch server
-$ yarn build
-$ yarn start
 
-# generate static project
-$ yarn generate
-```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## O que foi utilizado?
+
+ - [Nuxt.js](https://nuxtjs.org/)
+ - [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+ - [ViaCep](https://viacep.com.br/)
+ - [Axios](https://axios-http.com/)
+
+  
+## Demo
+
+- [Website](https://projeto-desafios.netlify.app/)
+
+  
