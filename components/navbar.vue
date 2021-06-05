@@ -6,9 +6,9 @@
           <b-navbar-nav>
             <b-nav-item class="ml-5" href="/">Início</b-nav-item>
             <b-nav-item class="ml-5" href="/instagram">Instagram</b-nav-item>
-            <b-nav-item class="ml-5" href="/form-login">Formulário de Login</b-nav-item>
-            <b-nav-item class="ml-5" href="/form-endereco">Formuário de Endereço</b-nav-item>
-            <b-nav-item class="ml-5" href="/form-endereco-api">API</b-nav-item>
+            <b-nav-item class="ml-5" href="/form-login">Inscrição</b-nav-item>
+            <b-nav-item class="ml-5" href="/form-endereco">Consultar Cep</b-nav-item>
+            <b-nav-item class="ml-5" href="/form-endereco-api">Converter moeda</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

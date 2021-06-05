@@ -55,7 +55,7 @@
           Enviar
         </button>
       </form>
-      <img src="../assets/onda.svg" alt="SVG ONDA" />
+      <img src="../assets/onda.svg" alt="SVG ONDA"/>
     </div>
   </div>
 </template>
@@ -123,10 +123,10 @@ img {
     margin-top: -1%;
   }
   img {
-    display: fixed;
+    position: fixed;
   }
   h3 {
-    font-size: 55px;
+    font-size: 45px;
   }
 }
 @media only screen and (max-width: 600px) {
