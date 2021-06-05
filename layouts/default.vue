@@ -18,3 +18,13 @@ export default {
   },
 };
 </script>
+
+<style>
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    height: 900px;
+    margin: 0 auto;
+  }
+}
+</style>

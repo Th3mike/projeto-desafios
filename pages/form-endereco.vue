@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex justify-content-center app">
+  <div class="container d-flex justify-content-center app custom-h">
     <div>
       <h3 class="display-3 text-dark">Consulte seu CEP</h3>
       <form method="get" action=".">
@@ -8,63 +8,77 @@
           type="text"
           placeholder="CEP"
           v-model="cep"
+          maxlength="8"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
           @blur="pesquisacep()"
         />
         <fieldset disabled>
+          <label for="rua" class="mt-2">Rua:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="logradouro"
+            placeholder="Rua"
             v-model="logradouro"
           />
+          <label for="complemento" class="mt-2">Complemento:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="complemento"
+            placeholder="Complemento"
             v-model="complemento"
           />
+          <label for="bairro" class="mt-2">Bairro:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="bairro"
+            placeholder="Bairro"
             v-model="bairro"
           />
+          <label for="cidade" class="mt-2">Cidade:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="localidade"
+            placeholder="Cidade"
             v-model="localidade"
           />
+          <label for="estado" class="mt-2">Estado:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="uf"
+            placeholder="Estado"
             v-model="uf"
           />
+          <!---
+          <label for="ibge" class="mt-2">IBGE:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="ibge"
+            placeholder="IBGE"
             v-model="ibge"
           />
+
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
             placeholder="gia"
             v-model="gia"
           />
+          --->
+          <label for="ddd" class="mt-2">DDD:</label>
           <input
-            class="form-control form-control-lg mt-2"
+            class="form-control form-control-lg"
             type="text"
-            placeholder="ddd"
+            placeholder="DDD"
             v-model="ddd"
           />
+          <!---
           <input
-            class="form-control form-control-lg mt-2 mb-2"
+            class="form-control form-control-lg"
             type="text"
             placeholder="siafi"
             v-model="siafi"
           />
+          --->
         </fieldset>
       </form>
     </div>
@@ -85,15 +99,29 @@ export default {
       bairro: null,
       localidade: null,
       uf: null,
-      ibge: null,
-      gia: null,
       ddd: null,
+      /* ibge: null,
+      gia: null,
       siafi: null,
+      */
     };
   },
   methods: {
+    onlynumber(evt) {
+      var theEvent = evt || window.event;
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+      //Aceitar somente teclas 0 à 9
+      var regex = /^[0-9.]+$/;
+      if (!regex.test(key)) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
+      }
+    },
     pesquisacep() {
-      if (this.cep) {
+      //Expressão regular para validar o CEP.
+      var validacep = /^[0-9]{8}$/;
+      if (validacep.test(this.cep)) {
         axios
           .get(`https://viacep.com.br/ws/${this.cep}/json/`)
           .then((result) => {
@@ -102,10 +130,11 @@ export default {
             this.bairro = result.data.bairro;
             this.localidade = result.data.localidade;
             this.uf = result.data.uf;
-            this.ibge = result.data.ibge;
-            this.gia = result.data.gia;
             this.ddd = result.data.ddd;
+            /*this.ibge = result.data.ibge;
+            this.gia = result.data.gia;
             this.siafi = result.data.siafi;
+            */
           });
       }
     },
@@ -125,9 +154,14 @@ img {
   }
   img {
     display: none;
-}
+  }
   h3 {
     font-size: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 25px;
   }
 }
 </style>

@@ -70,17 +70,18 @@ a:link {
 a:hover {
   color: white;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1280px) {
   footer {
     position: relative;
     bottom:0;
     left:0;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   footer {
     position: fixed;
     bottom:0;
+    left:0;
   }
 }
 </style>

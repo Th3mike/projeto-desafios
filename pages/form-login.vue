@@ -3,7 +3,7 @@
     class="container d-flex justify-content-center flex-column mobile"
     id="app"
   >
-    <div class="text-center mt-5">
+    <div class="text-center">
       <h3 class="display-3">
         Seja uma compiladora❤️
         <br />
@@ -48,7 +48,7 @@
             type="email" v-model="email"
             class="form-control"
             id="email"
-            placeholder="E-mail"
+            placeholder="bianca-pereira@hotmail.com"
           />
         </div>
         <button type="submit" value="enviar" class="btn btn-dark w-100 mt-2">
