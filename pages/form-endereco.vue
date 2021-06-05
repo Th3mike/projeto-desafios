@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex justify-content-center app custom-h">
+  <div class="container d-flex justify-content-center">
     <div>
       <h3 class="display-3 text-dark">Consulte seu CEP</h3>
       <form method="get" action=".">
@@ -149,14 +149,17 @@ img {
   bottom: 0;
 }
 @media only screen and (max-width: 1280px) {
+  label {
+    font-size: 15px;
+  }
   input {
-    height: 30px;
+    height: 20px;
   }
   img {
-    display: none;
+    position: fixed;
   }
   h3 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 @media only screen and (max-width: 600px) {

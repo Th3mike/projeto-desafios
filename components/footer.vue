@@ -72,7 +72,7 @@ a:hover {
 }
 @media only screen and (max-width: 1280px) {
   footer {
-    position: relative;
+    position: fixed;
     bottom:0;
     left:0;
   }

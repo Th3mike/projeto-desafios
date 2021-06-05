@@ -20,6 +20,13 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 1280px) {
+  main {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+  }
+}
 @media only screen and (max-width: 600px) {
   main {
     width: 100%;

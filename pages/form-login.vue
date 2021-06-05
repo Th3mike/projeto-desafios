@@ -123,7 +123,7 @@ img {
     margin-top: -1%;
   }
   img {
-    display: none;
+    display: fixed;
   }
   h3 {
     font-size: 55px;
