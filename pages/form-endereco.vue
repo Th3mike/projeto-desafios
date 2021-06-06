@@ -3,6 +3,7 @@
     <div>
       <h3 class="display-3 text-dark">Consulte seu CEP</h3>
       <form method="get" action=".">
+        <p id="erro" class="text-danger">{{ erro }}</p>
         <input
           class="form-control form-control-lg mt-2"
           type="text"
@@ -100,6 +101,7 @@ export default {
       localidade: null,
       uf: null,
       ddd: null,
+      erro: null,
       /* ibge: null,
       gia: null,
       siafi: null,
@@ -131,11 +133,24 @@ export default {
             this.localidade = result.data.localidade;
             this.uf = result.data.uf;
             this.ddd = result.data.ddd;
+             this.erro = null;
             /*this.ibge = result.data.ibge;
             this.gia = result.data.gia;
             this.siafi = result.data.siafi;
             */
           });
+      } else {
+        setTimeout(() => {
+          this.erro = null;
+        }, 10000);
+        this.logradouro =
+          this.complemento =
+          this.bairro =
+          this.localidade =
+          this.uf =
+          this.ddd =
+            "";
+        this.erro = "Formato de CEP inválido.";
       }
     },
   },
