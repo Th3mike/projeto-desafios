@@ -118,9 +118,9 @@ li {
     flex-direction: column;
   }
   h1 {
-    margin-top: 35px;
+    margin-top: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 </style>

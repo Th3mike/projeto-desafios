@@ -183,11 +183,10 @@ img {
   margin-top: 18%;
 }
 .background {
-  width: 70%;
+  width: 40%;
   height: 140px;
-  background: whitesmoke);
+  background: whitesmoke;
   box-shadow: 0px 10px 15px 5px rgba(12, 12, 12, 0.25);
-  border-radius: 370px;
 }
 @media only screen and (max-width: 1280px) {
   img {
