@@ -13,14 +13,16 @@
             @blur="converter()"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57"
           />
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Resultado"
-              v-model="resultado"
-              disabled
-            />
-          <button class="btn btn-dark ml-2" @onclick="converter()">Converter</button>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Resultado"
+            v-model="resultado"
+            disabled
+          />
+          <button class="btn btn-dark ml-2" @onclick="converter()">
+            Converter
+          </button>
         </div>
       </form>
     </div>
@@ -50,15 +52,16 @@ export default {
       }
     },
     converter() {
-      //Expressão regular para validar o CEP.
-      var validacampo = /^[0-9]$/;
-      if (validacampo.test(this.valor)) {
+      if (this.valor) {
         axios
           .get(
             `https://free.currconv.com/api/v7/convert?q=BRL_USD,USD_BRL&compact=ultra&apiKey=a7bb3a7df16277a000c1`
           )
           .then((result) => {
             this.resultado = result.data.resultado;
+            currVal.val(
+              numeral(currFrVal * data[currId].val).format("0,0.00[0]")
+            );
           });
       } else {
         alert("erro");
@@ -74,7 +77,8 @@ export default {
     justify-content: center;
     margin-top: 10px;
   }
-  input, button {
+  input,
+  button {
     margin-top: 10px;
   }
   button {

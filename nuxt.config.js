@@ -4,9 +4,9 @@ export default {
     routes: [
       "/",
       "/instagram",
-      "/form-login",
-      "/form-endereco",
-      "/form-endereco-api"
+      "/inscricao",
+      "/consultar-cep",
+      "/converter-moeda"
     ]
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
