@@ -14,7 +14,7 @@
           placeholder="CEP"
           v-model="cep"
           maxlength="8"
-          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          @keypress="onlynumber($event)"
           @blur="pesquisacep()"
         />
         <fieldset disabled>
