@@ -3,15 +3,20 @@
     <div>
       <h3 class="display-3 text-dark">Consulte seu CEP</h3>
       <form method="get" action=".">
-        <p id="erro" class="text-danger">
+        <p id="erro" class="text-danger text-center">
           <strong>
-          {{ erro }}
+            {{ erro }}
           </strong>
-          </p>
+        </p>
+        <p id="sucesso" class="text-success text-center">
+          <strong>
+            {{ sucesso }}
+          </strong>
+        </p>
         <input
           class="form-control form-control-lg mt-2"
           type="text"
-          placeholder="CEP"
+          placeholder="Insira o CEP"
           v-model="cep"
           maxlength="8"
           @keypress="onlynumber($event)"
@@ -106,6 +111,7 @@ export default {
       uf: null,
       ddd: null,
       erro: null,
+      sucesso: null,
       /* ibge: null,
       gia: null,
       siafi: null,
@@ -131,6 +137,7 @@ export default {
         axios
           .get(`https://viacep.com.br/ws/${this.cep}/json/`)
           .then((result) => {
+            this.sucesso = "✔️ Encontramos o CEP que você inseriu!";
             this.logradouro = result.data.logradouro;
             this.complemento = result.data.complemento;
             this.bairro = result.data.bairro;
@@ -154,7 +161,7 @@ export default {
           this.uf =
           this.ddd =
             "";
-        this.erro = "CEP inválido";
+        this.erro = "❌ CEP inválido";
       }
     },
   },

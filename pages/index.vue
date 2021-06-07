@@ -58,7 +58,7 @@
         </b-col>
         <b-col>
           <h1>Formulário de Endereço - API</h1>
-          <p>
+          <p class="mb-5">
             Siga este
             <a
               href="https://github.com/WoMakersCode/challenges-front-end/issues/11"
@@ -71,29 +71,8 @@
           </p>
         </b-col>
       </b-row>
-      <img :src="image" alt="Work">
     </b-container>
   </main>
 </template>
 
-<script>
-import image from "../assets/work.jpeg";
-
-export default {
-  data: function () {
-    return {
-      image: image,
-    };
-  },
-};
-</script>
-
-<style scoped>
-@media only screen and (max-width: 600px) {
-  img {
-    width: 250px;
-    height: 100%;
-  }
-}
-</style>
 

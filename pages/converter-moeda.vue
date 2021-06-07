@@ -185,8 +185,8 @@ img {
 .background {
   width: 70%;
   height: 140px;
-  background: rgb(214, 214, 214);
-  box-shadow: 0px 10px 15px 5px rgba(216, 216, 216, 0.25);
+  background: whitesmoke);
+  box-shadow: 0px 10px 15px 5px rgba(12, 12, 12, 0.25);
   border-radius: 370px;
 }
 @media only screen and (max-width: 1280px) {
@@ -198,10 +198,10 @@ img {
   .background {
     width: 100%;
     height: 180px;
-    background: rgb(214, 214, 214);
-    box-shadow: 0px 10px 15px 5px rgba(216, 216, 216, 0.25);
     border-radius: 30px;
-    margin-top: 10%;
+  }
+    img {
+    display: none;
   }
   input {
     width: 100%;

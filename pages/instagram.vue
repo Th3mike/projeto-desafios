@@ -14,79 +14,64 @@
           </li>
         </ul>
       </div>
-      <b-row cols="3">
+      <b-row class="mobile-text">
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
-            <b-card-text class="float-left">❤ Lorem Picsum </b-card-text>
-          </b-card>
-        </b-col>
-        <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
         <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
-            <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
-          </b-card>
-        </b-col>
-        <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
-            <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
-          </b-card>
-        </b-col>
-        <b-col class="mb-4 mt-4">
-          <b-card :img-src="image" img-alt="Card image">
+          <b-card :img-src="image" class="imagem mb-5" img-alt="Card image">
             <b-card-text class="float-left"> ❤ Lorem Picsum </b-card-text>
           </b-card>
         </b-col>
@@ -117,10 +102,21 @@ export default {
 li {
   list-style: none;
 }
+.imagem {
+  width: 250px;
+}
 @media only screen and (max-width: 600px) {
   .mobile-img {
     width: 100px;
     height: 100px;
+  }
+  .imagem {
+    width: 330px;
+  }
+  .mobile-text {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
   }
   h1 {
     margin-top: 35px;
