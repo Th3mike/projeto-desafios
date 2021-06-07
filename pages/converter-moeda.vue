@@ -15,7 +15,7 @@
           />
           <input
             type="text"
-            class="form-control"
+            class="form-control ml-2"
             placeholder="Resultado"
             v-model="resultado"
             disabled
@@ -58,8 +58,8 @@ export default {
             `https://free.currconv.com/api/v7/convert?q=BRL_USD,USD_BRL&compact=ultra&apiKey=a7bb3a7df16277a000c1`
           )
           .then((result) => {
-            this.resultado = result.data.resultado;
-            currVal.val(
+            this.resultado = result.data.numeral(currFrVal * data[currId].val).format("0,0.00[0]")
+            this.resultado.value(
               numeral(currFrVal * data[currId].val).format("0,0.00[0]")
             );
           });
