@@ -110,8 +110,6 @@ export default {
       localidade: null,
       uf: null,
       ddd: null,
-      erro: null,
-      sucesso: null,
       /* ibge: null,
       gia: null,
       siafi: null,
@@ -138,6 +136,7 @@ export default {
           .get(`https://viacep.com.br/ws/${this.cep}/json/`)
           .then((result) => {
             this.sucesso = "✔️ Encontramos o CEP que você inseriu!";
+            this.erro = null;
             this.logradouro = result.data.logradouro;
             this.complemento = result.data.complemento;
             this.bairro = result.data.bairro;
@@ -145,7 +144,7 @@ export default {
             this.uf = result.data.uf;
             this.ddd = result.data.ddd;
             setTimeout(() => {
-              this.sucesso = null;
+              this.sucesso;
             }, 10000);
             /*this.ibge = result.data.ibge;
             this.gia = result.data.gia;
@@ -154,7 +153,7 @@ export default {
           });
       } else {
         setTimeout(() => {
-          this.erro = null;
+          this.erro;
         }, 10000);
         this.logradouro =
           this.complemento =
@@ -164,6 +163,7 @@ export default {
           this.ddd =
             "";
         this.erro = "❌ CEP inválido";
+        this.sucesso = null;
       }
     },
   },
@@ -184,7 +184,7 @@ img {
     height: 20px;
   }
   img {
-    position: fixed;
+    display: none;
   }
   h3 {
     font-size: 30px;

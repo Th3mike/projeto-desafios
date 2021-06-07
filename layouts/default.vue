@@ -18,3 +18,9 @@ export default {
   },
 };
 </script>
+
+<style>
+main {
+  height: 600px;
+}
+</style>

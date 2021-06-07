@@ -164,16 +164,21 @@ button {
 }
 @media only screen and (max-width: 1280px) {
   .background {
-    margin-top: -1%;
+    margin-top: 5px;
   }
   img {
-    position: fixed;
+    display: none;
   }
   h3 {
     font-size: 45px;
   }
 }
 @media only screen and (max-width: 600px) {
+.background {
+  width: 100%;
+  height: 100%;
+  margin-top: 20%;
+}
   h3 {
     font-size: 50px;
   }
