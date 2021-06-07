@@ -144,7 +144,9 @@ export default {
             this.localidade = result.data.localidade;
             this.uf = result.data.uf;
             this.ddd = result.data.ddd;
-            this.erro = null;
+            setTimeout(() => {
+              this.sucesso = null;
+            }, 10000);
             /*this.ibge = result.data.ibge;
             this.gia = result.data.gia;
             this.siafi = result.data.siafi;
