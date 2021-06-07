@@ -114,8 +114,7 @@ li {
     width: 330px;
   }
   .mobile-text {
-    display: flex;
-    align-content: center;
+    margin-left: 10px;
     flex-direction: column;
   }
   h1 {
