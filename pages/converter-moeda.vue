@@ -189,8 +189,8 @@ img {
   box-shadow: 0px 10px 15px 5px rgba(12, 12, 12, 0.25);
 }
 @media only screen and (max-width: 1280px) {
-  img {
-    position: fixed;
+    img {
+    display: none;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -198,9 +198,6 @@ img {
     width: 100%;
     height: 180px;
     border-radius: 30px;
-  }
-    img {
-    display: none;
   }
   input {
     width: 100%;
