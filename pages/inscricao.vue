@@ -13,7 +13,7 @@
     <div class="container d-flex justify-content-center">
       <form
         v-on:submit.prevent="checkForm"
-        class="background"
+        class="background zoomIn"
         method="post"
         novalidate
       >
@@ -28,7 +28,7 @@
   </p>
         <div class="form-group">
           <label for="name"
-            >Nome<span style="color: red; font-weight: bold">*</span></label
+            ><strong>Nome<span style="color: red">*</span></strong></label
           >
           <input
             type="text"
@@ -42,7 +42,7 @@
         </div>
         <div class="form-group">
           <label for="email" class="mt-2"
-            >E-mail<span style="color: red; font-weight: bold">*</span></label
+            ><strong>E-mail<span style="color: red">*</span></strong></label
           >
           <input
             type="email" v-model="email"
@@ -51,7 +51,7 @@
             placeholder="bianca-pereira@hotmail.com"
           />
         </div>
-        <button type="submit" value="enviar" class="btn btn-dark w-100 mt-2">
+        <button type="submit" value="enviar" class="btn btn-dark mt-2">
           Enviar
         </button>
       </form>
@@ -73,7 +73,8 @@ export default {
   },
   methods: {
     validEmail: function (email) {
-      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
     isLetter(e) {
@@ -110,13 +111,56 @@ img {
   width: 100%;
   bottom: 0;
 }
-.background {
+input {
   width: 100%;
-  height: 100%;
   background: #ffffff;
   box-shadow: 0px 10px 15px 5px rgba(216, 216, 216, 0.25);
   border-radius: 30px;
+}
+button {
+  width: 100%;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 10px 15px 5px rgba(216, 216, 216, 0.25);
+}
+::placeholder {
+  font-size: 18px;
+}
+.background {
+  width: 60%;
+  height: 100%;
+  background: whitesmoke;
+  box-shadow: 0px 10px 15px 5px rgba(216, 216, 216, 0.25);
   margin-top: 10%;
+  border-radius: 10px;
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
 }
 @media only screen and (max-width: 1280px) {
   .background {
